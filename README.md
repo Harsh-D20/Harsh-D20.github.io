@@ -1,3 +1,5 @@
+# This personal portfolio is currently in progress. Any stylistic errors or missing functionality will be fixed.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

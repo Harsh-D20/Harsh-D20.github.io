@@ -1,0 +1,39 @@
+.card {
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+    display: flex;
+    margin: 5px;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 20px;
+}
+
+.img-container {
+    width: 50%;
+    height: 90%;
+}
+
+/* TODO: resize img responsively */
+.img-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-text {
+    width: 50%;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+/* TODO: resize title and text responsively */
+/* .title {
+
+}
+
+.text {
+
+} */

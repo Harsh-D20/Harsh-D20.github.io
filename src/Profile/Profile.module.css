@@ -1,0 +1,43 @@
+.profile {
+    display: flex;
+    margin: 5px;
+}
+
+/* TODO: vertically and horizontally center the image in the container */
+.pic-container {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border: 5px solid var(--secondary-color);
+    box-sizing: border-box;
+
+}
+
+.bio-container {
+    width: 80%;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-text {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+@media (max-width: 720px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-pic {
+        height: calc(56vh);
+    }
+}

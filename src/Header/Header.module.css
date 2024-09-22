@@ -1,0 +1,42 @@
+.header {
+    height: calc(8vh);
+    scroll-padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid white;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    margin-bottom: 20px;
+    z-index: 9999;
+    /* TODO: Change font for the title*/
+}
+.logo {
+    border: 2px solid white;
+    height: calc(12vh);
+    width: calc(16vh);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.navbar {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.options {
+    list-style: none;
+}
+
+.options li {
+    font-size: calc(1vw + 1vh);
+    display: inline-block;
+    margin-right: 40px;
+}
+
+#title {
+    font-size: calc(3vw + 3vh);
+}

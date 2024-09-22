@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+    --bg-color: #09183a;
+    --secondary-color: #6ed0f1;
+    --tertiary-color: #032955;
+    --text-color: #fff;
+    font-family: "Segoe UI", sans-serif;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  * {
+    color: var(--text-color);
   }
-  to {
-    transform: rotate(360deg);
+  
+  html {
+    background-color: var(--secondary-color);
+    /* background-image: url(assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
   }
-}
+  
+  body {
+    /* so cards stay inside body */
+    padding: 2%;
+    margin: auto;
+    width: 75%;
+    height: fit-content;
+    text-align: center;
+    background-color: var(--bg-color); 
+  }
+  
+  .name {
+    text-align: center;
+    height: fit-content;
+  }
+  
+  .bio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .bio-img {
+    height: 200px;
+    border-radius: 500px;
+    margin: auto 0;
+    border: 5px solid var(--secondary-color);
+  }
+  
+  /* TODO: make card sizes responsive */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  @media (max-width: 1040px) {
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 720px) {
+    .card-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 560px) {
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
