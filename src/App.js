@@ -8,12 +8,18 @@ import Profile from './Profile/Profile'
 
 function App() {
 
+  // TODO: create a new line between "areas of Computer Science" and "I have developed"
+  const bioString = `I am a student at the University of Maryland College Park pursuing a 
+    Bachelor of Science in Computer Science with a minor in both Statistics and Astronomy. 
+    I am a skilled Java programmer and love exploring more areas of Computer Science.
+    I have developed projects that have had measurable impact on others such as WordHelper for 
+    high school students, allowing them to create exciting programs and foster a love for computer 
+    science without worrying about the nitty-gritty details.`;
+
   const profileData = {
     title: "About Me",
     src: "/cropped_harsh.jpg",
-    bio: `I am a student at the University of Maryland College Park pursuing a 
-    Bachelor of Science in Computer Science with a minor in both Statistics and Astronomy. 
-    I am a skilled Java programmer and love exploring more areas of Computer Science.`
+    bio: bioString
   }
 
   const skillCardData = {

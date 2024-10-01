@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styles from './Profile.module.css'
 
 function Profile(props) {
@@ -14,6 +15,12 @@ function Profile(props) {
             </div>
         </>
     );
+}
+
+Profile.propTypes = {
+    src: PropTypes.string,
+    title: PropTypes.string,
+    bio: PropTypes.string
 }
 
 export default Profile

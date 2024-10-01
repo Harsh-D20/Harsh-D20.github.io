@@ -11,10 +11,10 @@
   }
   
   html {
-    background-color: var(--secondary-color);
-    /* background-image: url(assets/background.jpg);
+    /* background-color: var(--secondary-color); */
+    background-image: url(../public/background.jpg);
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
   }
   
   body {
