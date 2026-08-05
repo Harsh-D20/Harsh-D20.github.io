@@ -30,20 +30,3 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   })
 });
-
-const skills = [
-  'Python', 'PyTorch', 'Data Structures', 'Machine Learning', 'NumPy / Pandas / scikit-learn', 'Git / SVN', 'Docker', 
-  'Java', 'Algorithms', 'AWS', 'JavaScript / TypeScript', 'HTML', 'CSS', 'SQL', 'R / SAS', 
-  'React', 'Node.js', 'PostgreSQL',  'Linux',
-];
-
-const skillListEl = document.getElementById('skill-list');
-if (skillListEl) {
-  skillListEl.innerHTML = '';
-  skills.forEach(s => {
-    const span = document.createElement('span');
-    span.className = 'skill';
-    span.textContent = s;
-    skillListEl.appendChild(span);
-  });
-}
