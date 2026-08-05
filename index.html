@@ -5,7 +5,7 @@ layout: default
 <section class="hero container">
   <div class="hero-content">
     <h1>Hi, I'm <span class="accent">Harsh</span>!</h1>
-    <p>Aspiring AI/ML Engineer and Safety-Concious Developer</p>
+    <p> {{ site.data.about.tagline }} </p>
     <button class="cta-menu-toggle" aria-label="Toggle menu">Menu</button>
     <div class="cta-row" id="cta-menu">
       <a class="btn primary" href="Harsh-Desai-Resume.pdf" download>Download Resume</a>
@@ -21,11 +21,7 @@ layout: default
 
 <section id="about" class="about container">
   <h2>About Me</h2>
-  <p>
-    I'm an incoming Master of Engineering student at Cornell University, focusing on Artificial Intelligence and Machine Learning.
-    I've graduated from the University of Maryland, College Park, with a Bachelor's degree in Computer Science, and a minor in both Statistics and Astronomy.
-    I'm passionate about building projects that leverage AI/ML to solve real-world problems, and I'm particularly interested in the intersection of AI and safety.
-  </p>
+  <p> {{site.data.about.bio}} </p>
 </section>
 
 <section id="projects" class="projects container">
