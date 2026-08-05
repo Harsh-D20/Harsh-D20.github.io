@@ -1,0 +1,34 @@
+- title: Undergraduate Machine Learning Researcher
+  org: University of Maryland Institute for Advanced Computer Studies (UMIACS)
+  dateRange: Sep 2025 — May 2026
+  description: >
+    I've worked under Professor Tom Goldstein and PhD candidate Monte Hoover on DynaGuard 2, a dynamic guardrails model for policy adherence in LLMs.
+    I've collected over 220K+ AI safety and LLM interaction samples by analyzing major safety datasets such as CWEval, MT-SEC, ProSec, and RedCode, resulting in a comprehensive dataset for model training and evaluation.
+    I then supported the model training phase by implementing GRPO and SFT in verl and Modal.
+    Additionally, I derisked future project phases by looking into existing red-teaming frameworks such as NVIDIA's garak and Microsoft's PyRIT, resulting in informed decisions on project direction.
+
+- title: Undergraduate Teaching Assistant - Advanced Data Structures
+  org: University of Maryland Department of Computer Science
+  dateRange: Sep 2025 — May 2026
+  description: >
+    Over two semesters, I assisted over 500 students in mastering complex data structures such as B-Trees, KD-Trees, and Blockchains.
+    This involves time and space analysis, code implementation, and real-world applications of these data structures.
+    I held weekly office hours to help students programatically develop structures such as Scapegoat Trees and Compressed Tries from the ground up.
+    I proctored and graded 7 exams, maintaining communication with both students and the professor.
+    See the course website <a href="https://www.math.umd.edu/~immortal/CMSC420/">here</a>.
+
+- title: Backend Engineer and Engineering Administrator
+  org: Hack4Impact
+  dateRange: Sep 2024 — Jan 2026
+  description: >
+    I worked on the Engineering team for a 501(c)(3) non-profit that builds software for other non-profits.
+    As a member of the Engineering team, I designed the backend database schemas and tables, clarified relations between tables, and implemented these designs through REST and GraphQL APIs using TypeScript.
+    I wrote comprehensive tests to make sure all API functions worked as intended, ensuring 80%+ test coverage across the codebase.
+
+- title: Frontend Developer and Designer
+  org: Campus Coders Crew at UMD
+  dateRange: Jun 2025 — Aug 2025
+  description: >
+    I was on a developer team for a campus club dedicated to providing other clubs with websites and online platforms.
+    I architected 10+ components in Figma, then later implemented them into dynamic, responsive webpages with React and Tailwind CSS.
+    I collaborated in an Agile setting, managing tasks and contributing to timely project completion.

@@ -1,0 +1,14 @@
+title: Harsh Desai
+description: "Harsh Desai's Portfolio"
+url: "https://harshdesai.cv"
+
+collections:
+  projects:
+    output: false
+
+markdown: kramdown
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

@@ -8,3 +8,12 @@ __pycache__/
 *.pyc
 .idea/
 coverage/
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+.bundle/
+vendor/

@@ -1,191 +1,78 @@
-<!doctype html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="icon" type="image/x-icon" href="assets/favicon.png">
-  <meta name="description" content="Harsh Desai's Portfolio" />
-  <title>Harsh Desai</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="theme-color" content="#0f172a" />
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a class="logo" href="#">
-        <img class="logo-img" src="assets/logo.svg" alt="Harsh Desai Logo">
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<section class="hero container">
+  <div class="hero-content">
+    <h1>Hi, I'm <span class="accent">Harsh</span>!</h1>
+    <p> {{ site.data.about.tagline }} </p>
+    <button class="cta-menu-toggle" aria-label="Toggle menu">Menu</button>
+    <div class="cta-row" id="cta-menu">
+      <a class="btn primary" href="Harsh-Desai-Resume.pdf" download>Download Resume</a>
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class='btn primary' href="https://github.com/Harsh-D20" aria-label="GitHub">GitHub</a>
+      <a class='btn primary' href="https://www.linkedin.com/in/harsh-desai-23b5002a4/" aria-label="LinkedIn">LinkedIn</a>
     </div>
-  </header>
+  </div>
+  <div class="hero-photo">
+    <img src="assets/profile-pic.jpg" alt="Harsh Desai Profile photo">
+  </div>
+</section>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-content">
-        <h1>Hi, I'm <span class="accent">Harsh</span>!</h1>
-        <p>Aspiring AI/ML Engineer and Safety-Concious Developer</p>
-        <button class="cta-menu-toggle" aria-label="Toggle menu">Menu</button>
-        <div class="cta-row" id="cta-menu">
-          <a class="btn primary" href="Harsh-Desai-Resume.pdf" download>Download Resume</a>
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class='btn primary' href="https://github.com/Harsh-D20" aria-label="GitHub">GitHub</a>
-          <a class='btn primary'href="https://www.linkedin.com/in/harsh-desai-23b5002a4/" aria-label="LinkedIn">LinkedIn</a>
+<section id="about" class="about container">
+  <h2>About Me</h2>
+  <p> {{site.data.about.bio}} </p>
+</section>
+
+<section id="projects" class="projects container">
+  <h2>Projects</h2>
+  <div class="grid cards">
+    {% for project in site.projects %}
+      <article class="card">
+        <h3>{{ project.title }}</h3>
+        <p>
+          {{ project.description }}
+        </p>
+        <div class="tech-stack">{{ project.tech_stack }}</div>
+        <div class="card-actions">
+          {% for link in project.links %}
+            <a href="{{ link.url }}" class="btn small outline">{{ link.label }}</a>
+          {% endfor %}
         </div>
-      </div>
-      <div class="hero-photo">
-        <img src="assets/profile-pic.jpg" alt="Harsh Desai Profile photo">
-      </div>
-    </section>
+      </article>
+    {% endfor %}
+  </div>
+</section>
 
-    <section id="about" class="about container">
-      <h2>About Me</h2>
-      <p>
-        I'm an incoming Master of Engineering student at Cornell University, focusing on Artificial Intelligence and Machine Learning.
-        I've graduated from the University of Maryland, College Park, with a Bachelor's degree in Computer Science, and a minor in both Statistics and Astronomy.
-        I'm passionate about building projects that leverage AI/ML to solve real-world problems, and I'm particularly interested in the intersection of AI and safety.
-      </p>
-    </section>
+<section id="skills" class="skills container">
+  <h2>Skills</h2>
+  <div id="skill-list" class="skill-list" role="list" aria-label="Skills list">
+    {% for skill in site.data.skills %}
+      <span class="skill" role="listitem" aria-label="{{ skill }}">{{ skill }}</span>
+    {% endfor %}
+  </div>
+</section>
 
-    <section id="projects" class="projects container">
-      <h2>Projects</h2>
-      <div class="grid cards">
-        <article class="card">
-          <h3>ArXiv Semantic Search</h3>
-          <p>
-            A semantic search engine for ArXiv papers, built using Sentence Transformers, with searching capabilities enabled by FAISS and BM25. 
-            Implemented query expansion via Groq API to enhance search results.
-          </p>
-          <div class="tech-stack">Python, FAISS, BM25, Streamlit, Docker</div>
-          <div class="card-actions">
-            <a href="https://huggingface.co/spaces/harsh-d/arxiv-semantic-search" class="btn small outline">Site</a>
-            <a href="https://github.com/Harsh-D20/arxiv-recsys" class="btn small outline">GitHub</a>
-          </div>
-        </article>
-        <article class="card">
-          <h3>Virtual Assistive Robotics Module</h3>
-          <p>
-            Capstone for CMSC 435 -- Software Engineering at UMD. I worked in an Agile team of 5 developers to design, implement, and test a robotic 
-            arm simulation to allow UMD Nueromotor Control and Learning (NMCL) lab researchers to study Sense-of-Agency (SoA). We presented at the
-            2026 UMD Clark Engineering Capstone Design Expo
-          </p>
-          <div class="tech-stack">Unity, Gitlab, C#, Agile Methodology</div>
-          <div class="card-actions">
-            <a href="https://expo.umd.edu/projects/spring-2026/virtual-assistive-robotics-module" class="btn small outline">Expo Page</a>
-          </div>
-        </article>
-        
-        <article class="card">
-          <h3>Kompression</h3>
-          <p>
-            An Image Quantizer that relies on the K-Means++ algorithm.
-          </p>
-          <div class="tech-stack">Python, Flask, Tailwind CSS, HTML</div>
-          <div class="card-actions">
-            <a href="https://github.com/Harsh-D20/kompression-site" class="btn small outline">GitHub</a>
-          </div>
-        </article>
+<section id="experience" class="experience container">
+  <h2>Experience</h2>
+  <ul class="timeline">
+    {% for item in site.data.experiences %}
+      <li>
+        <div class="timeline-header">
+          <h3>{{ item.title }}</h3>
+          <h4>{{ item.org }}</h4>
+          <span class="timeline-date">{{ item.dateRange }}</span>
+        </div>
+        <p>
+          {{ item.description }}
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
-        <article class="card">
-          <h3>Portfolio Site</h3>
-          <p>
-            My personal portfolio website, hosted on GitHub Pages.
-          </p>
-          <div class="tech-stack">HTML/CSS/JavaScript, GitHub Pages</div>
-          <div class="card-actions">
-            <a href="#" class="btn small outline">Site</a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <section id="skills" class="skills container">
-      <h2>Skills</h2>
-      <div id="skill-list" class="skill-list" role="list" aria-label="Skills list"></div>
-    </section>
-
-    <section id="experience" class="experience container">
-      <h2>Experience</h2>
-      <ul class="timeline">
-        <li>
-          <div class="timeline-header">
-            <h3>Undergraduate Machine Learning Researcher</h3>
-            <h4>University of Maryland Institute for Advanced Computer Studies (UMIACS)</h4>
-            <span class="timeline-date">Sep 2025 — May 2026</span>
-          </div>
-          <p>
-            I've worked under Professor Tom Goldstein and PhD candidate Monte Hoover on DynaGuard 2, a dynamic guardrails model for policy adherence in LLMs.
-            I've collected over 220K+ AI safety and LLM interaction samples by analyzing major safety datasets such as CWEval, MT-SEC, ProSec, and RedCode, resulting in a comprehensive dataset for model training and evaluation.
-            I then supported the model training phase by implementing GRPO and SFT in verl and Modal. 
-            Additionally, I derisked future project phases by looking into existing red-teaming frameworks such as NVIDIA's garak and Microsoft's PyRIT, resulting in informed decisions on project direction.
-          </p>
-        </li>
-        <li>
-          <div class="timeline-header">
-            <h3>Undergraduate Teaching Assistant - Advanced Data Structures</h3>
-            <h4>University of Maryland Department of Computer Science</h4>
-            <span class="timeline-date">Sep 2025 — May 2026</span>
-          </div>
-          <p>
-            Over two semesters, I assisted over 500 students in mastering complex data structures such as B-Trees, KD-Trees, and Blockchains. 
-            This involves time and space analysis, code implementation, and real-world applications of these data structures.
-            I held weekly office hours to help students programatically develop structures such as Scapegoat Trees and Compressed Tries from the ground up. 
-            I proctored and graded 7 exams, maintaining communication with both students and the professor.
-            See the course website <a href="https://www.math.umd.edu/~immortal/CMSC420/">here</a>.
-          </p>
-        </li>
-        <li>
-          <div class="timeline-header">
-            <h3>Backend Engineer and Engineering Administrator</h3>
-            <h4>Hack4Impact</h4>
-            <span class="timeline-date">Sep 2024 — Jan 2026</span>
-          </div>
-          <p>
-            I worked on the Engineering team for a 501(c)(3) non-profit that builds software for other non-profits. 
-            As a member of the Engineering team, I designed the backend database schemas and tables, clarified relations between tables, and implemented these designs through REST and GraphQL APIs using TypeScript.
-            I wrote comprehensive tests to make sure all API functions worked as intended, ensuring 80%+ test coverage across the codebase.
-          </p>
-        </li>
-        <li>
-          <div class="timeline-header">
-            <h3>Frontend Developer and Designer</h3>
-            <h4>Campus Coders Crew at UMD</h4>
-            <span class="timeline-date">Jun 2025 — Aug 2025</span>
-          </div>
-          <p>
-            I was on a developer team for a campus club dedicated to providing other clubs with websites and online platforms.
-            I architected 10+ components in Figma, then later implemented them into dynamic, responsive webpages with React and Tailwind CSS. 
-            I collaborated in an Agile setting, managing tasks and contributing to timely project completion.
-          </p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="contact" class="contact container">
-      <h2>Contact</h2>
-      <p>Interested in collaborating? Email me directly at <a
-          href="mailto:desai.harsh.747@gmail.com">desai.harsh.747@gmail.com</a>.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Harsh Desai</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
-
-</html>
+<section id="contact" class="contact container">
+  <h2>Contact</h2>
+  <p>Interested in collaborating? Email me directly at <a
+      href="mailto:desai.harsh.747@gmail.com">desai.harsh.747@gmail.com</a>.</p>
+</section>
